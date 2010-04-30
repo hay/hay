@@ -13,69 +13,36 @@
             src: url('amerika.ttf');
         }
 
-        a {
-            color: white;
-            font-size: 24px;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-family: Amerika, arial, sans-serif;
-            font-weight: normal;
-        }
-
         .box {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50px;
+            left: 50px;
             width: 300px;
             height: 300px;
-            background: red;
+            background: white;
+            color: #333;
+            font-family: Amerika;
+            font-size: 400px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 0 10px #333;
+            -webkit-box-shadow: 0 0 10px #333;
+            -moz-box-shadow: 0 0 10px #333;
+
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
         }
-
-        .bouncebutton {
-            position: relative;
-        }
-
-            .bouncebutton a {
-                position: absolute;
-            }
-
-            .bouncebutton .bg {
-                position: absolute;
-                background: #B5D5FF;
-            }
     </style>
     <script>
-    $.fn.bounceButton = function() {
-        $(this).each(function() {
-            bounce(this);
-        });
-
-        function bounce(el) {
-            var $bg = $(el).parent().find(".bg");
-            var $a = $(el);
-            $bg.width($a.innerWidth()).height($a.height());
-            $a.click(function() {
-                var startHeight = $bg.height();
-
-                $bg.animate({
-                    height : '0px',
-                    top : ((startHeight - $bg.height()) / 2) + 'px'
-                }, "fast");
-            });
-        }
-
-        return this;
-    }
-
     $(document).ready(function() {
-        $("a").bounceButton();
         $(".box").click(
             function() {
                 function ani(left, trigger) {
                     return function() {
                         $(this).animate(
                             {
-                                "left" : left + "px"                        
+                                "left" : left + "px"
                             },
                             {
                                 "complete" : function() {
@@ -94,7 +61,7 @@
                         );
                     }
                 }
-                
+
                 $(this).bind('right', ani(500, 'left'));
                 $(this).bind('left', ani(0, 'right'));
                 $(this).trigger('right');
@@ -107,11 +74,6 @@
     </script>
 </head>
 <body>
-    <div class="box">click me</div>
-
-    <div class="bouncebutton">
-        <div class="bg"></div>
-        <a href="#">Hover over me</a>
-    </div>
+    <div class="box">&#9731;</div>
 </body>
 </html>
