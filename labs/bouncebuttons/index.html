@@ -3,14 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="jquery.easing.1.3.js"></script>
+    <script src="jquery.bouncebuttons.js"></script>
     <style>
         body {
             background: #9C3800;
-        }
-
-        @font-face {
-            font-family: Amerika;
-            src: url('amerika.ttf');
         }
 
         a {
@@ -18,100 +15,24 @@
             font-size: 24px;
             text-transform: uppercase;
             text-decoration: none;
-            font-family: Amerika, arial, sans-serif;
+            font-family: Verdana, Arial, sans-serif;
             font-weight: normal;
+            float: left;
+            margin-left: 20px;
         }
-
-        .box {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 300px;
-            height: 300px;
-            background: red;
-        }
-
-        .bouncebutton {
-            position: relative;
-        }
-
-            .bouncebutton a {
-                position: absolute;
-            }
-
-            .bouncebutton .bg {
-                position: absolute;
-                background: #B5D5FF;
-            }
     </style>
+
     <script>
-    $.fn.bounceButton = function() {
-        $(this).each(function() {
-            bounce(this);
-        });
-
-        function bounce(el) {
-            var $bg = $(el).parent().find(".bg");
-            var $a = $(el);
-            $bg.width($a.innerWidth()).height($a.height());
-            $a.click(function() {
-                var startHeight = $bg.height();
-
-                $bg.animate({
-                    height : '0px',
-                    top : ((startHeight - $bg.height()) / 2) + 'px'
-                }, "fast");
+        $(document).ready(function() {
+            $("a").bounceButtons({
+                color : "#f99"
             });
-        }
-
-        return this;
-    }
-
-    $(document).ready(function() {
-        $("a").bounceButton();
-        $(".box").click(
-            function() {
-                function ani(left, trigger) {
-                    return function() {
-                        $(this).animate(
-                            {
-                                "left" : left + "px"                        
-                            },
-                            {
-                                "complete" : function() {
-                                    $(this).trigger(trigger);
-                                },
-                                "step" : function(i) {
-                                    if (Math.round(i % 30) != 1) return;
-                                    var rot = 'rotate(' + i + 'deg)';
-                                    $(this).css({
-                                        '-moz-transform' : rot,
-                                        '-webkit-transform' : rot,
-                                        'transform' : rot
-                                    });
-                                }
-                            }
-                        );
-                    }
-                }
-                
-                $(this).bind('right', ani(500, 'left'));
-                $(this).bind('left', ani(0, 'right'));
-                $(this).trigger('right');
-            },
-            function() {
-                $(this).stop();
-            }
-        );
-    });
+        });
     </script>
 </head>
 <body>
-    <div class="box">click me</div>
-
-    <div class="bouncebutton">
-        <div class="bg"></div>
-        <a href="#">Hover over me</a>
-    </div>
+    <a href="#">Hover over me</a>
+    <a href="#">me too!</a>
+    <a href="#">Aww.. give me a hover!</a>
 </body>
 </html>
