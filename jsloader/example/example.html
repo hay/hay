@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<script src="../jsloader.js"></script>
+<script>
+// Loading a single file
+loadScript("single.js", function() {
+    alert("callback after the single file");
+});
+
+// Loading an array of files
+var files = ["1.js", "2.js"];
+loadScript(files, function() {
+    alert("callback after the array of files");
+});
+
+// A callback is not required
+loadScript("nocallback.js");
+</script>    
+</body>
+</html>

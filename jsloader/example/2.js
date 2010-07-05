@@ -1,0 +1,1 @@
+alert("Hi, i'm Javascript array file number 2");

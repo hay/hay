@@ -1,0 +1,1 @@
+alert("Hi, i'm a Javascript file that won't have a callback after my load");

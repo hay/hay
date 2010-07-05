@@ -1,0 +1,1 @@
+alert("Hi, i'm a single javascript file");
