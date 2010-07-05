@@ -1,6 +1,8 @@
 /*
  * loadScript() - A basic Javascript loader with support for arrays
  * - http://github.com/hay/hay/tree/master/jsloader/
+ * Tutorial:
+ * - http://www.haykranen.nl/?p=1290
  * Based on Nicholas C. Zakas' script:
  * - http://www.nczonline.net/blog/2009/07/28/the-best-way-to-load-external-javascript/
  * Licensed under the MIT / X11 License:
@@ -25,40 +27,49 @@
 
 function loadScript(arg, cb) {
     function load(url, callback) {
+        // Callback is not required
+        callback = callback || function(){};
+
         var script = document.createElement("script")
         script.type = "text/javascript";
 
-        if (script.readyState){  //IE
-            script.onreadystatechange = function(){
-                if (script.readyState == "loaded" ||
-                        script.readyState == "complete"){
+        if (script.readyState) {  // IE
+            script.onreadystatechange = function() {
+                // IE sometimes gives back the one state, and sometimes the
+                // other, so we need to check for both
+                if (script.readyState === "loaded" ||
+                    script.readyState === "complete") {
                     script.onreadystatechange = null;
                     callback();
                 }
             };
-        } else {  //Others
-            script.onload = function(){
+        } else {  // Others
+            script.onload = function() {
                 callback();
             };
         }
 
         script.src = url;
+        // Adding to the <head> is safer than the end of the <body>
         document.getElementsByTagName("head")[0].appendChild(script);
     }
 
+    // Used for loading one single file
     if (typeof arg === "string") {
         load(arg, cb);
-    } else {
-        var i = 0, l = arg.length - 1;
+    } else if (arg instanceof Array) {
+        // Load an array of files
+        var i = 0, l = arg.length;
 
         function loadCb() {
             if (i >= l) {
+                // Execute the original callback
                 cb();
                 return false;
             }
 
-            i++;
             load(arg[i], loadCb);
+            i++;
         }
 
         loadCb();
