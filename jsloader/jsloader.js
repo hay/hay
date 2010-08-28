@@ -26,6 +26,9 @@
 **/
 
 function loadScript(arg, cb) {
+    // Callback is not required
+    cb = cb || function(){};
+
     function load(url, callback) {
         // Callback is not required
         callback = callback || function(){};
