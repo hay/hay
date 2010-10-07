@@ -1,0 +1,287 @@
+<h1>Fronteers 2010</h1>
+
+<h1>Day 1</h1>
+
+<h2>The Design of HTML5 / <a href="http://www.adactio.com">Jeremy Keith</a> <a href="http://www.twitter.com/adactio">@adactio</a></h2>
+
+<ul>
+<li>"Design principles"
+<ul>
+<li>As in vision, see e.g Karl Marx en Declaration of Independence</li>
+<li>"Four legs good, two legs bad" - George Orwell</li>
+<li>Isaac Asimov’s three rules of robotics</li>
+</ul></li>
+<li>Tim Berners-Lee's design principle: decentralisation / independence</li>
+<li><p><strong>Postel's law</strong> is the design principle for html5:</p>
+
+<blockquote>
+  <p>Be conservative in what you send, be liberal in what you acccept</p>
+</blockquote></li>
+<li><p>Both W3C and WHATWG working on HTML5 is good because they're both good at different things</p></li>
+<li><a href="http://w3.org/TR/html-design-principles">W3C HTML design principles</a></li>
+<li>HTML5 is not about theoretical solutions, but about practice</li>
+<li>HTML5: <code>type="text/css"</code> not needed on <code>&lt;link&gt;</code> element</li>
+<li><a href="http://www.htmllint.com">HTML lint</a></li>
+<li>"pave the cowpaths" (use existing solutions)</li>
+<li><p><code>&lt;footer&gt;</code> doesn't have to be at the bottom:</p>
+
+<pre><code>&lt;article&gt;
+    &lt;p&gt;blabla&lt;/p&gt;
+    &lt;footer&gt;By Mr. X&lt;/footer&gt;
+&lt;/article&gt;
+</code></pre></li>
+<li><p><code>&lt;h1&gt;</code> can be used in every new node of the DOM tree:</p>
+
+<pre><code>&lt;article&gt;
+    &lt;h1&gt;bla&lt;/h1&gt;
+    &lt;section&gt;
+        &lt;h1&gt;bla&lt;/h1&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+</code></pre></li>
+<li><p><code>&lt;input type="search" placeholder="Search here!" /&gt;</code></p></li>
+<li><p>"Priority of constituencies"</p>
+
+<blockquote>
+  <p>In case of conflict, consider <strong>users</strong> over <strong>authors</strong> over
+  <em>* implementors</em>* over <strong>specifiers</strong> over <strong>theoretical purity</strong></p>
+</blockquote></li>
+<li><p><a href="d7ux.org">Drupal 7 User Experience Project</a></p></li>
+<li>"Publish your design principles!"</li>
+<li>"Rough consensus and running code" (The Tao of IETF)</li>
+<li><a href="http://www.mozilla.org/about/manifesto.en.html">The Mozilla Manifesto</a></li>
+<li>getAttribute() and the dot syntax don't give the same results for new <code>&lt;input&gt;</code> <code>type</code> attributes</li>
+<li>Not using HTML5 because of SEO reasons is BS.</li>
+<li>"SEO is like mierenneuken"</li>
+<li>ARIA roles in elements is valid in HTML5</li>
+</ul>
+
+<h2>JavaScript - Like a box of chocolates - <a href="http://robertnyman.com/">Robert Nyman</a> - [Twitter][http://twitter.com/robertnyman)</h2>
+
+<ul>
+<li><p>"Javascript was created by Brendan Eich in just 10 days." Then it took 15 years to mature :)</p>
+
+<p>[] instanceof Array; // true
+{} isntanceof Object; // false</p></li>
+<li><p>Type coercion: doing == first converts before comparison:</p>
+
+<p>7 == "7"; // true
+7 === "7"; / false</p></li>
+<li><p>From left to right, so:</p>
+
+<p>"5" + 6 + 7; // "567"</p></li>
+<li><p>"Self-invoking functions"</p>
+
+<p>(function() {
+    // bla
+})();</p></li>
+<li><p>Optimizaton:</p>
+
+<p>for (var i = 0, l = items.length; i &lt; l; i++)</p></li>
+<li><p>Handy:</p>
+
+<p>"flep" in { "flep" : "flap" }; // true</p></li>
+<li><p>Scope:</p>
+
+<p>function flep() {
+    return this.nodeName;
+}</p>
+
+<p>flep();/ undefined
+flep.call(document, "Hello"); // #document
+flep.apply(document.body, ["Hello", "Greetings"]; // body</p></li>
+<li><p><code>apply</code> accepts arguments in an array as the second parameter</p></li>
+<li><p>Closures:</p>
+
+<p>function flep(floep) {
+    return function(flip) {
+        return floep + flip;
+    }
+}</p>
+
+<p>var flap = flep("floep");
+flap("flup"); // floep flup</p></li>
+<li><p>Fixing for loops</p>
+
+<p>var i = "flep";
+flep.onclick = function(index) {
+    // "flep"
+}(i);</p></li>
+<li><p>YUI Javascript Module Pattern:</p>
+
+<p>var f = function() {
+    var private = 'private',
+        getPrivate = function() {
+            return private;
+        }</p>
+
+<pre><code>return {
+    "getPrivate" : getPrivate
+    "flep" : function() {
+        return Movie.forrest.getFirstName.call(this) + "iets anders";
+    }
+};
+</code></pre>
+
+<p>}();</p></li>
+<li><p>Ugly, but possible</p>
+
+<p>for (var i, l = items.length, blaat, floep, flip; i &lt; l; i++)</p></li>
+<li><p>I'd rather have:</p>
+
+<p>var blaat, floep;
+for (var i = 0, l = items.length; l &lt; i; i++)</p></li>
+</ul>
+
+<h2>Vector Graphics for the Web - <a href="http://codinginparadise.org/">Brad Neuberg</a> - <a href="http://twitter.com/bradneuberg">@bradneuberg</a> <a href="http://ajaxian.com">Ajaxian</a></h2>
+
+<ul>
+<li>"Small pieces loosely joined"</li>
+<li><a href="http://brad.com/html5-3d-slides/html5.html">Ultracool presentation from Brad</a></li>
+<li>Google indexes SVG</li>
+<li>Use SVG when dynamic resizing is important</li>
+<li>You can use CSS to style SVG!</li>
+<li><a href="http://code.google.com/p/svgweb/">SVG Web compatibility library for IE</a></li>
+</ul>
+
+<h2>CSS3 - Håkon Wium Lie (CTO, Opera, creator CSS) - <a href="http://people.opera.com/howcome/">Howcome</a></h2>
+
+<ul>
+<li>World Wide Web ca 1994: you click, we do the rest!</li>
+<li>"Nobody is ever going to use rounded corners" - Lie about CSS in 1994</li>
+<li><code>box-shadow: inset;</code></li>
+<li>You can use fonts to include pictures :)</li>
+<li><a href="http://www.princexml.com/fonts/steffman/index.css">Nice web fonts</a></li>
+<li><p>CSS3 Transitions:</p>
+
+<h1>trans {</h1>
+
+<pre><code>transition-duration: 1s;
+</code></pre>
+
+<p>}</p>
+
+<h1>trans:hover {</h1>
+
+<pre><code>color: red;
+background: black;
+letter-spacing: 10px;
+</code></pre>
+
+<p>}</p></li>
+<li><p><code>float:top</code> en <code>float:bottom</code> can be used for paged media</p></li>
+<li><p>CSS3 for paged media:</p>
+
+<p>@page {
+    @bottom-left {
+        content: counter(page);
+    }</p>
+
+<pre><code>@bottom-right {
+    content:
+}
+</code></pre>
+
+<p>}</p>
+
+<p>title {
+    string-set: title content();
+}</p></li>
+<li><p>Top countries using Opera mini:</p>
+
+<ol>
+<li>Indonesia</li>
+<li>Russia</li>
+<li>India</li>
+</ol></li>
+<li>Some non-international sites visited the most on Opera mini in Indonesia: 
+<ol>
+<li><a href="http://detik.com">detik.com</a></li>
+<li><a href="http://waptrick.com">waptrick.com</a></li>
+<li><a href="http://getjar.com">getjar.com</a></li>
+</ol></li>
+</ul>
+
+<h2>Progressive Downloads and Rendering - <a href="http://www.phpied.com">Stoyan Stefanov</a> [@stoyanstefanov)(http://twitter.com/stoyanstefanov) (Yahoo)</h2>
+
+<ul>
+<li><a href="http://www.perfplanet.com">Performance blog aggregator</a></li>
+<li><code>defer</code> and <code>async</code> properties (for ie / html5)</li>
+<li>Use <code>&lt;?php flush(); ?&gt;</code> to do chunked encoding</li>
+<li>Provide chunks for header, body, footer, such as with Google Instant</li>
+<li><a href="http://www.tinyurl.com/chunkview">Chunked encoding viewer</a></li>
+<li>Using inline CSS instead of <code>&lt;link /&gt;</code> is faster, possibly using post-loading</li>
+<li>Conditional comments (IE) block all loading in IE. Put them around the <code>&lt;html&gt;</code>
+tag and use a class on the <code>&lt;html&gt;</code> element for hacks</li>
+<li>You can preload resources, such as with a login screen, for the next possible screen.
+This might be possible using the <code>preload</code> attribute in the <code>&lt;link&gt;</code> element</li>
+<li>Use the <code>data:uri</code> format to save on HTTP requests. This works in all browsers and IE8 and higher.</li>
+<li>For IE6 / IE7 use MHTML. <a href="http://www.phpied.com/inline-mhtml-data-uris/">This has some quirks</a>.</li>
+<li>It is possible to do a complete web app in one single HTTP request. (maybe not very pragmatic :)
+<ul>
+<li>You might use some kind of servr-side browser sniffing for CSS stuff</li>
+<li>And the weird Russian JPG base64 header hack to service it to both IE
+and other browers (some voodo happening here :)</li>
+</ul></li>
+<li>Animations can be used as distractions (see Google Instant)</li>
+<li>50% of all users visiting a webpage don't have anything cached from that page</li>
+</ul>
+
+<h2>CSS Workflow - Jina Bolton (User Experience designer / <a href="http://www.engineyard.com">Engine Yard</a>)</h2>
+
+<ul>
+<li>Sushi &amp; Coffee</li>
+<li>Sketch before code</li>
+<li><p>Create systems instead of pages</p>
+
+<blockquote>
+  <p>Be regular and ordely in your life so that you may be
+  violent and original in your work
+  <em>Gustave Flaubert</em></p>
+</blockquote></li>
+<li><h1>page ipv #wrapper</h1></li>
+<li><a href="http://webdirections.org/slides/MicroformatsForDevelopers.pdf">Microformats for Developers</a></li>
+<li><a href="http://webdirections.org/slides/MicroformatsForDesigners.pdf">Microformats for Designers</a></li>
+</ul>
+
+<h2>Reusable code, for good or awesome - <a href="http://twitter.com/jaffathecake">Jake Archibald</a></h2>
+
+<ul>
+<li>Was van BBC (Glow), nu theTeam</li>
+<li>Define requirements</li>
+<li>Write feasability code</li>
+<li>Write API before code</li>
+<li>Show code to others: can they understand what it does?</li>
+<li>Put functions in:
+<ul>
+<li>Namespace
+<ul>
+<li>Organise when necessary</li>
+</ul></li>
+<li>Object</li>
+<li>Library plugin</li>
+</ul></li>
+<li>Jake Weary != jQuery</li>
+<li>jQuery.fn === jQuery.prototype</li>
+<li>Don't mix/match plugin vs namespace</li>
+<li>"Like most things in the world, this is Java's fault"</li>
+<li>JSdoc toolkit (Rhino) &lt;-- also does option objects docs!</li>
+<li>Send documantation around for evaluation before implementation</li>
+<li><p>Try to make arguments read well</p>
+
+<pre><code>element.cloneNode(true); // what does 'true do?
+jToys.carousel('#whatever', undefined, 500);
+</code></pre></li>
+<li><p>Make it simple for 80% of the use cases, but accomodate for the other 20%</p>
+
+<p>$.get vs $.ajax</p></li>
+<li><p>Look at jQuery UI method of instances and methods (but is cumbersome)</p></li>
+<li><p>Better way of doing it:</p>
+
+<p>var carousel = new jToys.CarouselPane("#whatever", {
+    ///
+});</p>
+
+<p>carousel.moveTo().flep().flap();</p></li>
+<li><p>Add hooks to inner workings (using events)</p></li>
+</ul>
