@@ -16,8 +16,7 @@
     * 1 million visits in 2010
     * Open source code
 
-> Stuff that is analog should become digital
-<br />
+> Stuff that is analog should become digital<br />
 > What we have managed to do to date is aggregate. We have managed to give access to Europe's culture.
 
 * Users go to Google or Wikipedia, they're not likely to use any of our portals, nor are they likely to start with Europeana. We have to find ways of making sure we are in the users workflow.
