@@ -16,7 +16,8 @@
     * 1 million visits in 2010
     * Open source code
 
-> Stuff that is analog should become digital<br />
+> Stuff that is analog should become digital
+<br />
 > What we have managed to do to date is aggregate. We have managed to give access to Europe's culture.
 
 * Users go to Google or Wikipedia, they're not likely to use any of our portals, nor are they likely to start with Europeana. We have to find ways of making sure we are in the users workflow.
@@ -86,13 +87,13 @@
 * More visits to the British Museum website because of increased quality of Wikipedia articles.
 * June 2008: big spike because of *Indiana Jones and the Crystal Skull* (a similiar skull is in the British Museum!) and people clicking through to the BM website
 
-    > All of these are about improving content
-    .
-    > All of these focus on personal relationships.
-    .
-    > All of these are about leveraging the communities.
-    .
-    > None of these focus on the resident's own work
+> All of these are about improving content
+<br />
+> All of these focus on personal relationships.
+<br />
+> All of these are about leveraging the communities.
+<br />
+> None of these focus on the resident's own work
 
 > Every institution can do something like this at home.
 
@@ -109,9 +110,9 @@
         * So people don't pretend they're us
         * *Preserve the "integrity" of the collection* (mostly used argument)
     
-    > This is not about Copyright. This is about Control. Who has it, who wants it, what are the risks and rewards of relaxing it.
-    .
-    > Copyright is an easy excuse, the real reason is control.
+> This is not about Copyright. This is about Control. Who has it, who wants it, what are the risks and rewards of relaxing it.
+<br />
+> Copyright is an easy excuse, the real reason is control.
 
 * Restrictions:
     * Derivative work
@@ -128,15 +129,15 @@
         * One Laptop per Child projects contains a complete copy of the Wikipedia.
 
 > *Wikipedia is not user generated content, it's community curated works!*
-.    
+<br />
 > Do you have an (e)-voluntuur program in your organisation (nobody raises hands).
-.
+<br />
 > Do you have a volunteer program? (few hands go up)
-.
+<br />
 > You do, even if you don't know it
-.
+<br />
 > If your content is not interoperable, it's not findable, and if it's not findable, who cares.
-.
+<br />
 > *Wikipedia is your volunteer program, whether you like it or not*
 
 * Compare to [Open Street Map](http://www.openstreetmap.org).
@@ -145,11 +146,12 @@
     * Liam put it up on Wikipedia, and it was translated in Czech and Hungarian.
     * Even the museum's website's license terms state that use is restricted. The Australian museum was not aware that their content was not re-usable.
 * Linked data
-    > Happy datasets are all alike, every unhappy dataset is unhappy in its own way.
-    .
-    > Similar datasets that are not interoperable are digital dual-gauge railways.
-    .
-    * **Digital content that technially or legally can't be integrated is useless**
-    * If Europeana content would be available it would be used much more
+> Happy datasets are all alike, every unhappy dataset is unhappy in its own way.
+<br />
+> Similar datasets that are not interoperable are digital dual-gauge railways.
+<br />
+* **Digital content that technially or legally can't be integrated is useless**
+<br />
+* If Europeana content would be available it would be used much more
 
 ### Cultural sector and Wikimedia are doing the same thing, for the same reason, for the same people, in the same medium. Let's do it together!
