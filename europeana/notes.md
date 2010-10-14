@@ -1,11 +1,11 @@
-# [Europeana Open Culture Conference](http://version1.europeana.eu/web/europeana-plenary-2010/)
+## [Europeana Open Culture Conference](http://version1.europeana.eu/web/europeana-plenary-2010/)
 ## Thursday October 14th 2010
 * Notes taken by Hay Kranen [@huskyr](http://twitter.com/huskyr) and [Friedel](@europeanaeu) via [Piratepad](http://piratepad.net/gRFYutP4ym)
 
 ## Europeana overview - Jill Cousins
 
-    > Europeana is the most visible representation of Europe
-    > - Neelie Kroes
+> Europeana is the most visible representation of Europe
+> - Neelie Kroes
 
 * Stats:
     * 13 million objects
@@ -16,9 +16,9 @@
     * 1 million visits in 2010
     * Open source code
 
-    > Stuff that is analog should become digital
-    .
-    > What we have managed to do to date is aggregate. We have managed to give access to Europe's culture.
+> Stuff that is analog should become digital
+.
+> What we have managed to do to date is aggregate. We have managed to give access to Europe's culture.
 
 * Users go to Google or Wikipedia, they're not likely to use any of our portals, nor are they likely to start with Europeana. We have to find ways of making sure we are in the users workflow.
 * We need to move into a position where we are providing more to the needs of the user, and where the user has started...
@@ -44,7 +44,8 @@
     3. Education
     4. Economic growth
 
-*Four points to focus on*
+### Four points to focus on
+
 * Aggregate
     * Build the open trusted source for European digital cultural material.
     * 2% is audio and visual material. However, most users click on audio/video material. We therefore need more audio/video material!
@@ -97,7 +98,8 @@
 > Every institution can do something like this at home.
 
 * Risks and rewards
-    > *Unknown risks are accounted for and oversetimated while unknown rewards are discounted and underestimated*
+> *Unknown risks are accounted for and oversetimated while unknown rewards are discounted and underestimated*
+
     * Why restrict digital access?
         * An artist made a mistake
         * "Security"
@@ -107,7 +109,7 @@
         * Decreased incentive to visit in person
         * So people don't pretend they're us
         * *Preserve the "integrity" of the collection* (mostly used argument)
-
+    
     > This is not about Copyright. This is about Control. Who has it, who wants it, what are the risks and rewards of relaxing it.
     .
     > Copyright is an easy excuse, the real reason is control.
@@ -126,18 +128,17 @@
         * [$20 Wikipedia reader uses 8-bit computing power](http://www.wired.com/gadgetlab/2010/07/humane-wikipedia-reader/)
         * One Laptop per Child projects contains a complete copy of the Wikipedia.
 
-    > *Wikipedia is not user generated content, it's community curated works!*
-
-    
-    > Do you have an (e)-voluntuur program in your organisation (nobody raises hands).
-    .
-    > Do you have a volunteer program? (few hands go up)
-    .
-    > You do, even if you don't know it
-    .
-    > If your content is not interoperable, it's not findable, and if it's not findable, who cares.
-    .
-    > *Wikipedia is your volunteer program, whether you like it or not*
+> *Wikipedia is not user generated content, it's community curated works!*
+.    
+> Do you have an (e)-voluntuur program in your organisation (nobody raises hands).
+.
+> Do you have a volunteer program? (few hands go up)
+.
+> You do, even if you don't know it
+.
+> If your content is not interoperable, it's not findable, and if it's not findable, who cares.
+.
+> *Wikipedia is your volunteer program, whether you like it or not*
 
 * Compare to [Open Street Map](http://www.openstreetmap.org).
     * OSM mapped the refugee camps in Port-au-prince in 24 hours.
