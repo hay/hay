@@ -35,3 +35,37 @@
     2. Easy access
     3. Re-use
     4. In my workflow
+* What do providers want
+    1. Visibility / Open Access
+    2. Premium services
+    3. Access to network
+    4. Brand association
+* Policy Makers
+    1. Inclusion
+    2. Leadership
+    3. Education
+    4. Economic growth
+
+## The main four points 
+* Aggregate
+    * Build the open trusted source for European digital cultural material.
+    * 2% is audio and visual material. Most users click on audio/video material.
+    * We need more!
+    * 18-20th century dominance
+    * There are more than 395 million RDF links between data sources
+    * Tagging content with controlled vocabularies:(example of 
+* Distribute:
+    * Portals, API's, widgets, etc.
+    * Into the schools systems, the blind, history teachers
+    > We aren't proposing that Europeana has a school kids site. We should put it into the sites that already exist.
+* Facilitate
+    * IPR, knwledge sharing, open source code, advocay, examples (thought lab)
+    * [Europena lab for experiments](http://europeanalabs.eu/)
+    * Data provider agreements: majority signed current agreements
+    * Collective licensing
+* Engage
+    * Add UGC, exhibitions, competitions, mashups, social networks
+    * [The Great War Archive into mainland Europe](http://www.oucs.ox.ac.uk/ww1lit/gwa/)
+
+    > We want to aggregate, facilitate, distribute and engage.
+
