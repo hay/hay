@@ -1,10 +1,11 @@
-# Europeana 2010
+# [Europeana Open Culture Conference](http://version1.europeana.eu/web/europeana-plenary-2010/)
+## Thursday October 14th 2010
 * Notes taken by Hay Kranen [@huskyr](http://twitter.com/huskyr) and [Friedel](@europeanaeu) via [Piratepad](http://piratepad.net/gRFYutP4ym)
 
 ## Europeana overview - Jill Cousins
 
     > Europeana is the most visible representation of Europe
-    > *Neelie Kroes*
+    > - Neelie Kroes
 
 * Stats:
     * 13 million objects
@@ -43,7 +44,7 @@
     3. Education
     4. Economic growth
 
-* *Four points to focus on*
+*Four points to focus on*
 * Aggregate
     * Build the open trusted source for European digital cultural material.
     * 2% is audio and visual material. However, most users click on audio/video material. We therefore need more audio/video material!
@@ -64,8 +65,8 @@
 
     > We want to aggregate, facilitate, distribute and engage.
 
-## Peace, love and metadata - [Liam Wyatt](http://wittylama.com/blog)  - [@wittylama](http://twitter.com/wittylama) - [Slides are here](http://prezi.com/fdjjl0tfpghu/peace-love-metadata/)
-* Spent a month in the British museum as the [Wikipedian in residence](http://en.wp.org/WP:GLAM/BM)
+## Peace, love and metadata - [Liam Wyatt](http://wittylama.com/blog)  - [@wittylama](http://twitter.com/wittylama) - [Slides](http://prezi.com/fdjjl0tfpghu/peace-love-metadata/)
+* Spent a month in the British museum as the [Wikipedian in residence](http://en.wikipedia.org/wiki/Wikipedia:GLAM/BM)
 * What can be done in 5 weeks, with $0 budget, 6 subprojects, 50 appearances on the main page of the English Wikipedia, increased quality
 * Smithsonian, Children's Museum also want a Wikipedian in residence (Jealousy is a wonderful motivator!)
 * [GLAM-wiki conferences](http://glamwiki.org) - The Wikipedian in residence idea was born here
@@ -86,11 +87,15 @@
 * June 2008: big spike because of *Indiana Jones and the Crystal Skull* (a similiar skull is in the British Museum!) and people clicking through to the BM website
 
     > All of these are about improving content
+    .
     > All of these focus on personal relationships.
+    .
     > All of these are about leveraging the communities.
+    .
     > None of these focus on the resident's own work
 
 > Every institution can do something like this at home.
+
 * Risks and rewards
     > *Unknown risks are accounted for and oversetimated while unknown rewards are discounted and underestimated*
     * Why restrict digital access?
@@ -122,9 +127,12 @@
         * One Laptop per Child projects contains a complete copy of the Wikipedia.
 
     > *Wikipedia is not user generated content, it's community curated works!*
-    .
+
+    
     > Do you have an (e)-voluntuur program in your organisation (nobody raises hands).
+    .
     > Do you have a volunteer program? (few hands go up)
+    .
     > You do, even if you don't know it
     .
     > If your content is not interoperable, it's not findable, and if it's not findable, who cares.
@@ -138,8 +146,10 @@
     * Even the museum's website's license terms state that use is restricted. The Australian museum was not aware that their content was not re-usable.
 * Linked data
     > Happy datasets are all alike, every unhappy dataset is unhappy in its own way.
+    .
     > Similar datasets that are not interoperable are digital dual-gauge railways.
-    * *Digital content that technially or legally can't be integrated is useless*
+    .
+    * **Digital content that technially or legally can't be integrated is useless**
     * If Europeana content would be available it would be used much more
 
-### Cultural sector and Wikimedia are doing the same thing, for the same reason, for the same people, in the same medium. **Let's do it together**
+### Cultural sector and Wikimedia are doing the same thing, for the same reason, for the same people, in the same medium. Let's do it together!
