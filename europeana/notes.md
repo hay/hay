@@ -142,6 +142,8 @@
         
         > You do, even if you don't know it
         
+        > If your content is not interoperable, it's not findable, and if it's not findable, who cares.
+        
         > Wikipedia is like a sausage
         
         > Wikipedia is your volunteer program, whether you like it or not
