@@ -126,9 +126,36 @@
         * Commercial use
             * Defined by Creative Commons as something that is 'primariliy intented for or directed toward commercial adventage'
             * "[Sita sings the blues](http://www.sitasingstheblues.com/)" - Animation based on the sanskrit [Ramayana](http://en.wikipedia.org/wiki/Ramayana), using songs that are out of copyright and releasing it under a Creative Commons license.
-            
+
         * Wikipedia, the free encyclopedia:
             * The four freedoms (from the free software community)
             * There are 8 licenses, but only three are usable on Wikipedia: Public domain, CC-BY and CC-BY-SA. Non-commercial licenses are not allowed on Wikipedia.
             * Why? We don't want to restrict people in their use of our content.
+            * [$20 Wikipedia reader uses 8-bit computing power](http://www.wired.com/gadgetlab/2010/07/humane-wikipedia-reader/)
+            * One Laptop per Child projects contains a complete copy of the Wikipedia
             
+        > *Wikipedia is not user generated content, it's community curated works!*
+        
+        * Do you have an (e)-voluntuur program in your organisation (nobody raises hands).
+        
+        > Do you have a volunteer program? (few hands go up)
+        
+        > You do, even if you don't know it
+        
+        > Wikipedia is like a sausage
+        
+        > Wikipedia is your volunteer program, whether you like it or not
+
+    * Compare to [Open Street Map](http://www.openstreetmap.org).
+        * OSM mapped the refugee camps in Port-au-prince in 24 hours
+        
+    * List of members of the Bounty
+        * Liam put it up on Wikipedia, and it was translated in Czech and Hungarian.
+        * Even though on the website from the Australian museum that have it in their collection it says 'you can't use this material'. The Australian museum was not aware that their content was not re-usable.
+    * Linked data
+        * Happy datasets are all alike, every unhappy dataset is unhappy in its own way.
+        * Similar datasets that are not interoperable are digital dual-gauge railways.
+        * *Digital content that technially or legally can't be integrated is useless*
+        * If Europeana content would be available it would be used much more
+        
+*Cultural sector and Wikimedia are doing the same thing, for the same reason, for the same people, in the same medium. **Let's do it together** *
