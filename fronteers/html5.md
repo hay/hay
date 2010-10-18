@@ -79,3 +79,36 @@ DOCTYPE in HTML5
 FATALITY!
 =========
 <img src="img/mk2.png" width="800" />
+
+Nieuwe mogelijkheden
+====================
+* `<canvas>`
+* `<svg>`
+* `<audio>`
+* `<video>`
+* `<input>` types
+* `<section>`, `<header>`, `<footer>`, etc.
+
+`<canvas>`
+==========
+Prachtige presentatie van de canvas tag
+
+`<svg>`
+=======
+Prachtige presentatie van de svg tag
+
+`<audio>`
+=========
+Prachtige presentatie van de audio tag
+
+`<video>`
+=========
+Prachtige presentatie van de video tag
+
+`<input> types`
+===============
+Prachtige presentatie van de nieuwe input types
+
+`<section>`, `<header>`, `<footer>`, etc.
+=========================================
+Prachtige presentatie van de canvas tag
