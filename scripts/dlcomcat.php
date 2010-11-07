@@ -1,13 +1,7 @@
 #!/usr/bin/php
 <?php
 // Writes a JSON file with all images in a Commons category
-
-require 'class-http-request.php';
-
-function apirequest($args) {
-    return "http://commons.wikimedia.org/w/api.php?" .
-           http_build_query($args);
-}
+require 'dlcomcatcm.php';
 
 function request($cmcontinue = false) {
     $args = array(
@@ -21,17 +15,9 @@ function request($cmcontinue = false) {
     if ($cmcontinue) {
         $args['cmcontinue'] = $cmcontinue;
     }
-
-    $url = apirequest($args);
-
-    echo "Getting $url\n";
-
-    $r = new HttpRequest("get", $url);
-    if ($r->getError()) {
-        echo $r->getError();
-    } else {
-        return json_decode($r->getResponse(), true);
-    }
+    
+    $mw = new MwApiRequest($args);
+    return $mw->getResponse();
 }
 
 $images = array();
