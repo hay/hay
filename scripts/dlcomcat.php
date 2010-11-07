@@ -1,5 +1,7 @@
 #!/usr/bin/php
 <?php
+// Writes a JSON file with all images in a Commons category
+
 require 'class-http-request.php';
 
 function apirequest($args) {
@@ -13,11 +15,11 @@ function request($cmcontinue = false) {
         "action" => "query",
         "list" => "categorymembers",
         "cmtitle" => "Category:Images_from_Wiki_Loves_Monuments",
-        "cmlimit" => "10"
+        "cmlimit" => "500"
     );
 
     if ($cmcontinue) {
-        array_push($args, "cmcontinue" => $cmcontinue;
+        $args['cmcontinue'] = $cmcontinue;
     }
 
     $url = apirequest($args);
@@ -33,11 +35,21 @@ function request($cmcontinue = false) {
 }
 
 $images = array();
+$firstquery = true;
 
 do {
-    $cmcontinue = (isset($data['query-continue']))
-                  ? $data['query-continue']['categorymembers']['cmcontinue'])
-                  : false;
+    if (isset($data['query-continue'])) {
+        $cmcontinue = $data['query-continue']['categorymembers']['cmcontinue'];
+    } else {
+        // First time or last query?
+        if ($firstquery) {
+            $cmcontinue = true;
+            $firstquery = false;
+        } else {
+            echo "No more images..\n";
+            break;
+        }
+    }
 
     $data = request($cmcontinue);
 
@@ -46,14 +58,15 @@ do {
         break;
     } else {
         echo "Adding images...\n";
-        for ($data['query']['categorymembers'] as $c) {
+
+        foreach ($data['query']['categorymembers'] as $c) {
             echo $c['title'] . "\n";
+            $images[] = $c;
         }
-        array_push($images, $data['query']['categorymembers']);
+
+        file_put_contents("files.json", json_encode($images));
     }
 } while (true);
 
 echo "Done!\n";
 print_r($images);
-
-file_put_contents("files.json", json_encode($images));
