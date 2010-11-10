@@ -36,6 +36,6 @@ foreach ($files as $f) {
     logit("FOUND: $url");
 
     // Download
-    exec('wget -nc "' . $url . '"');
+    exec('wget -P jpg -nc "' . $url . '"');
 }
 logit("DONE");
