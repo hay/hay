@@ -3,9 +3,10 @@
  * HttpRequest - A simple PHP class using cURL for Ajax-like HTTP requests
  * by Hay Kranen <hay at bykr dot org>
  * Released under the MIT / X11 license
- * version 1.0
+ * version 1.1
  *
- * Use:
+ * == Example ==
+ *
  * $r = new HttpRequest($method, $url, $data, $args)
  * $method: "get" / "post"
  * $url: duh :)
@@ -23,6 +24,9 @@
  *     var_dump($tweets);
  * }
  * 
+ * == Version history ==
+ * - Added HEAD method
+ *
  * == License (MIT/X11) ==
  * 
  * Permission is hereby granted, free of charge, to any person
@@ -50,6 +54,7 @@ class HttpRequest {
     private $method, $url, $data = false;
     private $error, $hasError = false, $response, $status;
     private $requestInfo, $curlError, $headers = array();
+    private $supportedMethods = array("post", "get", "head");
 
     // Default arguments
     private $args = array(
@@ -58,10 +63,11 @@ class HttpRequest {
 
     function __construct($method, $url, $data = false, $args = false) {
         $method = strtolower($method);
-        if ($method == "post" || $method == "get") {
+        
+        if (in_array($method, $this->supportedMethods)) {
             $this->method = $method;
         } else {
-            $this->setError("Invalid method: $method");
+            $this->setError("Invalid or unsupported method: $method");
             return;
         }
 
@@ -150,6 +156,11 @@ class HttpRequest {
             curl_setopt($c, CURLOPT_USERAGENT, "Mozilla/5.0");
         } else {
             curl_setopt($c, CURLOPT_USERAGENT, $this->args['useragent']);
+        }
+        
+        // HEAD request
+        if ($this->method == "head") {
+            curl_setopt($c, CURLOPT_NOBODY, true);
         }
 
         $this->response    = curl_exec($c);
