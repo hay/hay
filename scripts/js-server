@@ -3,7 +3,7 @@
 JS_DIR=~/htdocs/js/trunk
 
 case $1 in
-    cleanbuild)
+    clean-build)
         cd $JS_DIR
         growlnotify -m "Doing a clean install on Javascript server"
         mvn clean install
