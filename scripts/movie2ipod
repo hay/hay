@@ -1,0 +1,2 @@
+#! /bin/bash
+ffmpegx -i $1 -f mp4 -maxrate 1000 -b 300 -qmin 3 -qmax 5 -bufsize 4096 -g 300 -vcodec mpeg4 -acodec aac $1.mp4

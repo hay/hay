@@ -1,0 +1,2 @@
+#! /bin/bash
+lame -V 0 $1 $1.mp3

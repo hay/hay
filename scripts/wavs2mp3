@@ -1,0 +1,4 @@
+#!/bin/bash
+for i in $( ls ); do
+    lame -V 0 $i $i.mp3
+done

@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+    echo "usage: cc-cat-min filename"
+    exit
+fi
+echo "processing $1..."
+cat * > $1
+java -jar ~/dev/bin/compiler.jar --js $1 --js_output_file $1.min.js
+rm $1

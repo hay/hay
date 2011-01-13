@@ -1,0 +1,2 @@
+#!/bin/bash
+mvn jetty:run-exploded -Dorg.apache.jackrabbit.core.cluster.node_id=hay -P public

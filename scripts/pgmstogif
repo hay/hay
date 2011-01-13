@@ -1,0 +1,7 @@
+#!/bin/bash
+for i in $( ls ); do
+    echo 'converting' $i
+    pgmtoppm "#FFFFFF" $i > $i.ppm
+    ppmtogif $i.ppm > $i.gif    
+    echo "done"
+done

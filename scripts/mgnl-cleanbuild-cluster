@@ -1,0 +1,7 @@
+#!/bin/bash
+cd ~/htdocs/magnolia/
+growlnotify -m "Doing a clean install of all Magnolia modules"
+mvn clean install
+cd ~/htdocs/magnolia/magnolia-site
+growlnotify -m "Starting up Magnolia"
+mgnl-start-cluster

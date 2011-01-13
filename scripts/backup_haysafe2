@@ -1,0 +1,20 @@
+#!/bin/bash
+rsync -av ~/Data/                                   /Volumes/HAYSAFE2/Data
+rsync -av ~/Desktop/                                /Volumes/HAYSAFE2/Data/Desktop
+rsync -av ~/dev/                                    /Volumes/HAYSAFE2/Data/dev
+rsync -av ~/.ssh/                                   /Volumes/HAYSAFE2/Data/ssh
+rsync -av ~/Documents/                              /Volumes/HAYSAFE2/Documents
+rsync -av ~/Downloads/                              /Volumes/HAYSAFE2/Software_OSX
+rsync -av ~/htdocs/                                 /Volumes/HAYSAFE2/Data/htdocs
+rsync -av ~/Library/Mail/                           /Volumes/HAYSAFE2/Data/Email_cur_mailapp
+rsync -av ~/Movies/Speelfilms/                      /Volumes/HAYSAFE2/Media/Speelfilms
+rsync -av ~/Movies/Video/                           /Volumes/HAYSAFE2/Media/Video
+rsync -av ~/Music/MP3/                              /Volumes/HAYSAFE2/Media
+rsync -av ~/Pictures/                               /Volumes/HAYSAFE2/Media/Afbeeldingen
+rsync -av ~/Projecten/ --exclude Muziek/            /Volumes/HAYSAFE2/Projecten
+rsync -av ~/Projecten/Muziek/                       /Volumes/HAYSAFE2/Muziek/
+rsync -av ~/svn/                                    /Volumes/HAYSAFE2/Data/svn
+rsync -av "/Users/hay/Music/iTunes/iTunes Music/Podcasts/"   /Volumes/HAYSAFE2/Media/Podcasts
+# forget it, this takes fucking ages
+# rsync -av ~/ParallelsVM/                            /Volumes/HAYSAFE2/Data/ParallelsVM
+growlnotify -m "Backup complete!"
