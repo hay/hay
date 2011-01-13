@@ -1,0 +1,20 @@
+#!/bin/bash
+
+JS_DIR=~/htdocs/js/trunk
+
+case $1 in
+    cleanbuild)
+        cd $JS_DIR
+        growlnotify -m "Doing a clean install on Javascript server"
+        mvn clean install
+        js-server-start
+        ;;
+    start)
+        cd $JS_DIR/js-server
+        growlnotify -m "Starting the server"        
+        mvn jetty:run
+        ;;
+    *)
+        echo "js-server (start|clean-build)"
+        ;;
+esac
