@@ -14,7 +14,13 @@ case $1 in
         growlnotify -m "Starting the server"        
         mvn jetty:run
         ;;
+    create-module)
+        cd $JS_DIR
+        growlnotify -m "Creating new module"
+        mvn archetype:generate -DarchetypeCatalog=http://nexus.vpro.nl/service/local/repositories/releases/content/archetype-catalog.xml
+        echo "Remember to add your module to the pom in js-server and add it to resourcesAsCsv!"
+        ;;        
     *)
-        echo "js-server (start|clean-build)"
+        echo "js-server (start|clean-build|create-module)"
         ;;
 esac
