@@ -1,0 +1,8 @@
+#!/bin/bash
+svn up ~/htdocs/magnolia/
+svn up ~/htdocs/frontend/
+svn up ~/htdocs/wpmu
+svn up ~/htdocs/wordpress-mu/wp-content/plugins/
+svn up ~/htdocs/wordpress-mu/wp-content/themes/
+svn up ~/htdocs/wordpress-mu/wp-content/mu-plugins/
+svn up ~/htdocs/js

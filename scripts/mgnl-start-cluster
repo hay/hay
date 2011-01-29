@@ -1,0 +1,2 @@
+cd ~/htdocs/magnolia/magnolia-site
+mvn jetty:run-exploded -Dorg.apache.jackrabbit.core.cluster.node_id=hay -Dvpro-js.remote.host=http://haymac.vpro.nl:8080 -P cluster

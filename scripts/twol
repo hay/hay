@@ -1,0 +1,25 @@
+#! /usr/bin/php
+<?php
+// Twol CLI
+// This is a simple shell script for getting back results from the Twol
+// http://twol.haykranen.nl
+
+// Parameters are from $argv[1] ... to the end
+unset($argv[0]);
+$query = implode(" ", $argv);
+
+$url = "http://twol.haykranen.nl/api/?q=" . urlencode($query) . "&format=json&long=true";
+$result = @file_get_contents($url);
+
+function quit($msg) {
+    die($msg . "\n");
+}
+
+if (!$result) quit("Could not get a connection. Is your internet working?");
+
+$json = json_decode($result, true);
+
+if (!$json) quit("Could not decode the result");
+
+quit( (isset($json['error'])) ? $json['error'] : $json['result'] );
+?>

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+JS_DIR=~/htdocs/js/trunk
+
+case $1 in
+    clean-build)
+        cd $JS_DIR
+        growlnotify -m "Doing a clean install on Javascript server"
+        mvn clean install
+        js-server start
+        ;;
+    start)
+        cd $JS_DIR/js-server
+        growlnotify -m "Starting the server"        
+        mvn jetty:run
+        ;;
+    create-module)
+        cd $JS_DIR
+        growlnotify -m "Creating new module"
+        mvn archetype:generate -DarchetypeCatalog=http://nexus.vpro.nl/service/local/repositories/releases/content/archetype-catalog.xml
+        echo "Remember to add your module to the pom in js-server and add it to resourcesAsCsv!"
+        ;;        
+    *)
+        echo "js-server (start|clean-build|create-module)"
+        ;;
+esac

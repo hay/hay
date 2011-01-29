@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in $( ls ); do
+    echo 'converting' $i
+    pgmtoppm "#FFFFFF" $i > $i.ppm    
+    echo "done"
+done

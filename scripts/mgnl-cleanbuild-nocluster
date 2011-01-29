@@ -1,0 +1,11 @@
+#!/bin/bash
+cd ~/htdocs/magnolia/
+growlnotify -m "Doing a clean install of all Magnolia modules"
+mvn clean install
+cd ~/htdocs/magnolia/magnolia-site
+growlnotify -m "Deleting old work1 directory"
+rm -rf work1
+growlnotify -m "Moving old work directory to work1"
+mv work work1
+growlnotify -m "Starting up Magnolia"
+mvn jetty:run-exploded

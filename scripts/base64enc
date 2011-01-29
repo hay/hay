@@ -1,0 +1,13 @@
+#!/usr/bin/php
+<?php
+function quit($msg) {
+    die($msg . "\n");
+}
+
+$filename = $argv[1];
+if (!file_exists($filename)) quit("File does not exist: $filename");
+
+$file = file_get_contents($filename);
+if (!$file) quit("File read error with $filanme");
+
+echo base64_encode($file);

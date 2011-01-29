@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar ~/dev/bin/compiler.jar --js $1 --js_output_file $1.min.js

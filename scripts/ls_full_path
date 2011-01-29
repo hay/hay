@@ -1,0 +1,10 @@
+#!/bin/sh
+ls -RlA | awk -v PATH=`pwd` '{ \
+if ($0 ~ /.*:$/) \
+path = substr($0,3,length($0)-4); \
+else \
+if ($0 ~ /^[-l]/) \
+printf("%s\t%s%s/%s\n", $5, PATH, path, \
+substr($0, match($0,"\"[^\"]*\"")+1, RLENGTH-2) \
+) \
+}' 

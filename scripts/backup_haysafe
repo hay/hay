@@ -1,0 +1,18 @@
+#!/bin/bash
+rsync -rvt --modify-window=1 --progress ~/Data/                                   /Volumes/HAYSAFE/Data
+rsync -rvt --modify-window=1 --progress ~/Desktop/                                /Volumes/HAYSAFE/Data/Desktop
+rsync -rvt --modify-window=1 --progress ~/dev/ --exclude checkouts/               /Volumes/HAYSAFE/Data/dev
+rsync -rvt --modify-window=1 --progress ~/Documents/ --exclude Parallels/         /Volumes/HAYSAFE/Documents
+rsync -rvt --modify-window=1 --progress ~/Downloads/ --exclude Incoming/          /Volumes/HAYSAFE/Software_OSX
+rsync -rvt --modify-window=1 --progress ~/htdocs/                                 /Volumes/HAYSAFE/Data/htdocs
+rsync -rvt --modify-window=1 --progress ~/Library/Mail/                           /Volumes/HAYSAFE/Data/Email_cur_mailapp
+rsync -rvt --modify-window=1 --progress ~/Movies/Speelfilms/                      /Volumes/HAYSAFE/Media/Speelfilms
+rsync -rvt --modify-window=1 --progress ~/Movies/Video/                           /Volumes/HAYSAFE/Media/Video
+rsync -rvt --modify-window=1 --progress ~/Music/MP3/                              /Volumes/HAYSAFE/MP3
+rsync -rvt --modify-window=1 --progress ~/Pictures/                               /Volumes/HAYSAFE/Media/Afbeeldingen
+rsync -rvt --modify-window=1 --progress ~/Projecten/ --exclude Muziek/            /Volumes/HAYSAFE/Projecten
+rsync -rvt --modify-window=1 --progress ~/Projecten/Muziek/                       /Volumes/HAYSAFE/Muziek/
+rsync -rvt --modify-window=1 --progress ~/svn/                                    /Volumes/HAYSAFE/Data/svn
+# this is far too much for the old 300gb HD!
+# rsync -a --modify-window=1 --progress ~/ParallelsVM/                            /Volumes/HAYSAFE/Data/ParallelsVM
+# rsync -a --modify-window=1 --progress "/Users/hay/Music/iTunes/iTunes Music/Podcasts/"   /Volumes/HAYSAFE/Media/Podcasts

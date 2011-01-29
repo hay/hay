@@ -1,0 +1,2 @@
+#!/bin/bash
+tidy -iqbc -utf8 -wrap 140 --indent-spaces 4 $1 > $1_new.html

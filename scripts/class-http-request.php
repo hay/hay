@@ -63,6 +63,7 @@ class HttpRequest {
 
     function __construct($method, $url, $data = false, $args = false) {
         $method = strtolower($method);
+        
         if (in_array($method, $this->supportedMethods)) {
             $this->method = $method;
         } else {
