@@ -36,3 +36,22 @@
             $page++;
         }
     } while (true);
+
+    // Convert to CSV as well
+    $csvdata = array_map(function($tweet) {
+        return array(
+            "id" => $tweet['id'],
+            "from_user" => $tweet['from_user'],
+            "created_at" => $tweet['created_at'],
+            "text" => $tweet['text']
+        );
+    }, $tweets);
+
+    $file = fopen("$query.csv", "w");
+
+    // Put keys
+    fputcsv($file, array("id", "from_user", "created_at", "text") );
+
+    foreach ($csvdata as $fields) {
+        fputcsv($file, $fields);
+    }
