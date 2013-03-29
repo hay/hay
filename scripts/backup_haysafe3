@@ -3,10 +3,12 @@ rsync -av ~/Data/                                   /Volumes/HAYSAFE3/Data
 rsync -av ~/Desktop/                                /Volumes/HAYSAFE3/Data/Desktop
 rsync -av ~/dev/                                    /Volumes/HAYSAFE3/Data/dev
 rsync -av ~/.ssh/                                   /Volumes/HAYSAFE3/Data/ssh
+rsync -av /Applications/MAMP/                       /Volumes/HAYSAFE3/Data/MAMP
 rsync -av ~/Documents/                              /Volumes/HAYSAFE3/Documents
 rsync -av ~/Downloads/                              /Volumes/HAYSAFE3/Software_OSX
 rsync -av ~/htdocs/                                 /Volumes/HAYSAFE3/Data/htdocs
 rsync -av ~/Library/Mail/                           /Volumes/HAYSAFE3/Data/Email_cur_mailapp
+rsync -av ~/Movies/Incoming/                        /Volumes/HAYSAFE3/Media/Speelfilms
 rsync -av ~/Movies/Speelfilms/                      /Volumes/HAYSAFE3/Media/Speelfilms
 rsync -av ~/Movies/Video/                           /Volumes/HAYSAFE3/Media/Video
 rsync -av ~/Music/MP3/                              /Volumes/HAYSAFE3/Media

@@ -2,7 +2,7 @@
 <?php
 require 'dlcomcatcm.php';
 
-$files = file("sebas2.txt");
+$files = file("piet.txt");
 
 function request($title) {
     $mw = new MwApiRequest(array(

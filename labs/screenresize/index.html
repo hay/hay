@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Screen resize test</title>
+    <style>
+        #wrapper {
+            overflow: hidden;
+            display: block;
+        }
+        
+        section {
+            float: left;
+            display: block;
+            margin: 10px;
+        }
+        
+        .w320 {
+            width: 300px;
+            background: red;
+        }
+        
+        .w160 {
+            width: 140px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Width</h1>
+    
+    <div id="wrapper">
+        <script id="t" type="text/html">
+            <p>Ik ben makelaar in koffi, en woon op de Lauriergracht No 37. Het is mijn gewoonte niet, romans te schrijven, of zulke dingen, en het heeft dan ook lang geduurd, voor ik er toe overging een paar riem papier extra te bestellen, en het werk aan te vangen, dat gij, lieve lezer, zoâven in de hand hebt genomen, en dat ge lezen moet als ge makelaar in koffie zijt, of als ge wat anders zijt. Niet alleen dat ik nooit iets schreef wat naar een roman geleek, maar ik houd er zelfs niet van, iets dergelijks te lezen, omdat ik een man van zaken ben. </p>
+            
+            <p>Dat zijn ook makelaars in koffie, doch hun adres behoeft ge niet te weten. Ik pas er dus wel op, dat ik geen romans schrijf, of andere valse opgaven doe. Ik heb dan ook altijd opgemerkt dat mensen die zich met zoiets inlaten, gewoonlijk slecht wegkomen. Ik ben drieënveertig jaar oud, bezoek sedert twintig jaren de beurs, en kan dus voor de dag treden, als men iemand roept die ondervinding heeft. Ik heb al wat huizen zien vallen! En gewoonlijk, wanneer ik de oorzaken naging, kwam het me voor, dat die moesten gezocht worden in de verkeerde richting die aan de meesten gegeven was in hun jeugd.</p>
+            
+            <p>Ik zeg: waarheid en gezond verstand, en hier blijf ik bij. Voor de Schrift maak ik natuurlijk een uitzondering. De fout begint al van Van Alphen af, en wel terstond bij de eerste regel over die `lieve wichtjes'. Wat drommel kon die oude heer bewegen, zich uit te geven voor een aanbidder van mijn zusje Truitje die zere ogen had, of van mijn broer Gerrit die altijd met zijn neus speelde? En toch, hij zegt: `dat hij die versjes zong, door liefde gedrongen'.</p>  
+          </script>      
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>    
+    <script>
+        var t = $("#t").html();
+        
+        var classes = ['w320', 'w160', 'w160', 'w320', 'w320', 'w160', 'w160'];
+        $.each(classes, function () {
+            $("#wrapper").append('<section class="' + this + '">' + t + '</section>');
+        });
+        
+        var resolutions = [
+            320, 480, 640, 960, 1120    
+        ];
+        
+        function getResolution() {        
+            var w = $("html, body").innerWidth();
+                
+            for (var i = 0, l = resolutions.length; i < l; i++) {
+                var tw = resolutions[i] - 20; // (20 = margin)
+                console.log(w,tw);
+                if (w < tw) return tw;
+            }
+            
+            // Resolution is bigger than max, so return max
+            return resolutions[l - 1];
+        }
+        
+        $(window).bind("load resize", function() {
+            $("h1").text($("html, body").innerWidth());
+            var rl = getResolution();
+            $("#wrapper").width(rl);
+        });
+    </script>    
+</body>
+</html>
