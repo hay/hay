@@ -1,0 +1,70 @@
+#!/bin/python
+"""A simple script to convert a Discogs CSV to a HTML or JSON file
+
+Example
+
+python discogs-csv-to-html -i in.csv -o out.html
+
+"""
+
+import csv, json, argparse, sys
+from operator import itemgetter
+
+def get_html(data):
+    html = "<ul>\n"
+
+    # Sort by artist
+    collection = sorted(data, key=itemgetter('Artist'))
+
+    for r in collection:
+        html += "<li>%s - %s (%s, %s) - %s</li>\n" % (
+            r["Artist"],
+            r["Title"],
+            r["Label"],
+            r["Released"],
+            r["Catalog#"]
+        )
+
+    html += "</ul>"
+
+    return html
+
+def load_csv(filename):
+    collection = []
+    f = file(filename)
+    reader = csv.DictReader(f)
+
+    for row in reader:
+        collection.append(row)
+
+    return collection
+
+def main():
+    parser = argparse.ArgumentParser(description = "Convert your Discogs.com CSV to HTML or JSON")
+    parser.add_argument('-i', '--input', type = str, help = "Input filename")
+    parser.add_argument('-o', '--output', type = str, help = "Output filename")
+    parser.add_argument('-t', '--type', choices = ('json', 'html'), default = 'html', help = "Output format")
+
+    args = parser.parse_args()
+
+    if not args.input:
+        sys.exit("No input file given")
+
+    if not args.output:
+        sys.exit("No output file given")
+
+    data = load_csv(args.input)
+
+    f = open(args.output, "w")
+
+    if args.type == 'json':
+        data = json.dumps(data, indent = 4)
+
+    if args.type == "html":
+        data = get_html(data)
+
+    f.write(data)
+    sys.exit("Data written to %s" % args.output)
+
+if __name__ == "__main__":
+    main()
